@@ -1,5 +1,7 @@
 VŽDY POUŽÍVAŤ VEĽKÉ A MALÉ PÍSMENÁ
 
-ls - načítanie súborov
+ls - vypísanie súborov
 gcc main.c -E
 gcc main.c -c
+gcc main.c -E
+gcc -Wall -Wextra -pedantic -O2 main.c Vektor.c -lm o spusti
