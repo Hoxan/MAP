@@ -1,0 +1,5 @@
+VŽDY POUŽÍVAŤ VEĽKÉ A MALÉ PÍSMENÁ
+
+ls - načítanie súborov
+gcc main.c -E
+gcc main.c -c
