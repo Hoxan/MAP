@@ -1,0 +1,28 @@
+Pamat je rozdelena do neikolkych oblasti, dolezity je zasobnik, pamat je rozdelena do suplickov a kazda ma svoju adresu, kde sa ukladaju premenne, pristup k zasobniku sa pouziva najcastejsie pomocou skratky:
+LIFO (posledny dovnutra, prvy von). 
+Premenne sa vzdy robia v zasobniku (v zasobniku sa vyhradi urcita pamat napr. 4 gb, tak k 4 gb sa priradi symbolicky nazov K, vzdy ked sa v kompilatore odvolavame na k, tak je to len symbolicke.
+Velkost zasobniku je obmedzena a k pomeru pamati velmi mala. Casto sa objavuje chyba preteceny zasobnik, znamena to vycerpany zasobnik a nemaju sa kde ukladat premenne.
+
+Dalsou castou pamate je pamat urcena pre kod, tam kde je cely binarny kod programu, ktory sa spusta, vola sa halda alebo hromada. 
+Pokial sa data do zasobniku nezmestia, tak treba siahnut na hromadu, ale nie je to jednoduche, na to aby sme to mohli pouzit, potrebujeme poznat pointery (smerniky)
+
+Ak vytvorime pointer,budeme mat premennu ale nebude ukazovat priamo na data, ale bude ukazovat len na miesto v pamati, na ktorej budem moct potom pracovat s datami.
+Ako ich vytvaram? Pomocou operatoru hviezdicka, moze byt unarny alebo binarny. Binarny znamena, ze ma 2 operanty, teda nasobenie. k*l (nasobenie. k* znamena to ze budem pracovat so smernikmi
+Ked chcem zadefinovat premennu, ktora bude pointerom, tak musim tu hviezdicku pouzit --) int*p_m (p sa standartne zvykne pridavat pointerom, aby sme ich videli). Premenna pm bude pointerom, ktora bude ukazovat na hromadu a na tej hromade moze byt ulozena nejaka hodnota, int obsahuje len adresu nie priamo hodnotu. 
+Samotna premenna typu pointer je ulozena priamo v zasobniku. Vsetko co sa vytvara priamo v zasobniku ma nahodnu hodnotu.
+Kedze premena pm je ulozena v zasobniku, tak aj adresa, ktora je v nej ulozena je nahodne (a to je zle).
+NIKDY NEPOUZIVAT NEINICIALIZOVANY POINTER (teda taky, ktoru sme nepriradili konkretnu adresu).  Najcastejsie sa to v programoch prejavi tym, ze raz ide, potom nejde, potom padne atd.
+Ako teda pointer inicizalizovat (mame 2 moznosti)
+1. pomocou adresy existujucej premennej (napr. int k, symbolicky nazov, ktory poukazuje na hodnotu v zasobniku, ekby sme ale chceli adresa k poznat a pouzit ju na inicializaciu int *p_m, tak napiseme --) pm = &k; Mohol by som 2 kroky spojit aj do jedneho a napisat (tak sa to vacsinou aj robi) --) int*pm=&k; 
+Ked teraz napisem napr. k=10; a pm=10; tak by som to iba prepisal. Musim teda pouzit deferencny operator a dat pred to hviezdicku --) *pm=10;
+& --) referencny operator --) vracia adresu
+* --) deferencny operator --) umoznuje na adresu zapisovat
+
+2. Je castejsia a dolezitejsia
+Umoznuje inicializovat pointer adresou lubovolneho miesta v pamati, ktore je na hromade. 
+Ak to chceme spravit musime pouzit specialny postup, ktory jazyk c ponuka
+int*p_h= (int*) malloc (sizeoff(int)); 
+int*p_h= (int*) malloc (sizeoff(int)*10); --) vytvoril by som dynamicke pole
+na to aby sme si dokazali DYNAMICKY uchmatnut pamat, tak pouzivame prikaz malloc
+dynamicke pole ma vyhodu, ze ked ho raz vytvorime pomocou pointeru mozeme v nom pridavat, skracovat a pod. az kym nam pamat hromada bude stacit
+prototyp mallocu --) void*malloc (int pocetbajtov) ocakava pocet bajtov, ktore nam ma vyhradit na hromade a vracia pointer na void
