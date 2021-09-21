@@ -23,6 +23,8 @@ Umoznuje inicializovat pointer adresou lubovolneho miesta v pamati, ktore je na 
 Ak to chceme spravit musime pouzit specialny postup, ktory jazyk c ponuka
 int*p_h= (int*) malloc (sizeoff(int)); 
 int*p_h= (int*) malloc (sizeoff(int)*10); --) vytvoril by som dynamicke pole
+int pole [10] --) toto je pole staticke a uz sa s nim neda nic robit.
+To co si ukradnem z hromady musim hromadu aj vratit --) free(p_h); --) jedna z najcastejsich chyb, ze si neupraceme pamat 
 na to aby sme si dokazali DYNAMICKY uchmatnut pamat, tak pouzivame prikaz malloc
 dynamicke pole ma vyhodu, ze ked ho raz vytvorime pomocou pointeru mozeme v nom pridavat, skracovat a pod. az kym nam pamat hromada bude stacit
 prototyp mallocu --) void*malloc (int pocetbajtov) ocakava pocet bajtov, ktore nam ma vyhradit na hromade a vracia pointer na void
