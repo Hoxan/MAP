@@ -28,3 +28,23 @@ To co si ukradnem z hromady musim hromadu aj vratit --) free(p_h); --) jedna z n
 na to aby sme si dokazali DYNAMICKY uchmatnut pamat, tak pouzivame prikaz malloc
 dynamicke pole ma vyhodu, ze ked ho raz vytvorime pomocou pointeru mozeme v nom pridavat, skracovat a pod. az kym nam pamat hromada bude stacit
 prototyp mallocu --) void*malloc (int pocetbajtov) ocakava pocet bajtov, ktore nam ma vyhradit na hromade a vracia pointer na void
+
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	int zasobnik;
+	int *pPrvy = &zasobnik; //Referencny operator
+	*pPrvy =100; //Deferencny operator (Keby to urobim bez hviezdicky, tak by to bolo na tvrdo a zle)
+	//int *pDruhy = (int *)malloc(sizeof(int));
+	int *pDruhy;
+	if((pDruhy=(int *)malloc(sizeof(int)))==NULL)
+	{
+		puts("Neda sa alokovat pamat!");
+		exit (1);
+	}
+	// float *pTreti = (float *)malloc (float *)malloc(1) //Poziadanie o alokaciu jedneho bajtu, vo windowse sa vzdy alokuje 16, takze nikdy nedostaneme len 1, ale vzdy viac.
+	return 0;
+}
