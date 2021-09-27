@@ -1,0 +1,9 @@
+Všetko je objekt a každý má nejaké vlastnosti (napr. farba, hmotnosť...)
+Okrem toho ze ma vlastnosti su dane aj jeho schopnosti (schopnost monitoru zobrazovat pismenka)
+teda zaklad su vlastnosti a schopnosti. Pretoze objektove prog. vychadza z toho ze pri riesenie problemu ho riesime tak, aby sme mali vytvoreny nejaky objekt a k nemu priradit urcite vlastnosti a schopnosti
+
+Zakladne charakteristiky kazdeho objektoveho programovacie jazyka su 3: zapuzdrenost (ochrana obejktu pred vplyvom z vonku), dedicnost, polymorfizmus
+Zapuzdrenost: napr. ten kto zostrojil monitor nema zaujem aby sme pristupovali ku vsetkym jeho vlastnostiam (napr. cipy a pod.), takze vyrobil objekt monitoru a zapuzdril ho (dal ho do krytu) aby nam poskytol len obmedzene moznosti, ako s nim manipulovat, teda dal nam iba urcite rozhranie a metody, ktorymi mozeme jeho vlastnosti zmenit. Teda chrani objekt proti pristupu z vonku. Napr. pri varnej konvici dostaneme navod na pouzitie a o tom mozeme povedat, ze je vlastne rozhranie. Takato moznost v jazyku C nie je, nedaju sa vyrabat objekty.
+Dedicnost: Existuje vela druhov aut, ale maju nieco spolocne, teda dalo by sa povedat, ze maju nejakeho predka. Preto vznikla myslienka, ze pri tvorbe objektu, resp. objektu ktory sa nemu podoba, vytvorim jeden zakladny objekt, priradim mu zakladne vlastnosti a schopnosti ktore budu platit pre vsetky auta, potom vytvorim napr. nakladne auto no nebudem tvorit novy objekt, len ma nieco navyse, lebo si zoberiem zakladny objekt auto. 
+Polymorfizmus: schopnost programu reagovat rovnakym sposobom na rozne podnety (vstupy). Napr. mam objekt psa a ten ma cuch, nejakym sposobom mu funguje, ale ked zacucha svojho pana, jedlo alebo suseda, tak reaguje inac. Teda dostava nejake podnety pre svoj cuch a na kazdy iny podnet dokaze inac reagovat. 
+?
