@@ -48,3 +48,10 @@ int main(int argc, char **argv)
 	// float *pTreti = (float *)malloc (float *)malloc(1) //Poziadanie o alokaciu jedneho bajtu, vo windowse sa vzdy alokuje 16, takze nikdy nedostaneme len 1, ale vzdy viac.
 	return 0;
 }
+
+
+v prikaze free(pole); je dobry priradit nulovy smernik teda --) pole = NULL;
+free(pole);
+pole = NULL;
+
+
