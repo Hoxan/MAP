@@ -7,3 +7,11 @@ Zapuzdrenost: napr. ten kto zostrojil monitor nema zaujem aby sme pristupovali k
 Dedicnost: Existuje vela druhov aut, ale maju nieco spolocne, teda dalo by sa povedat, ze maju nejakeho predka. Preto vznikla myslienka, ze pri tvorbe objektu, resp. objektu ktory sa nemu podoba, vytvorim jeden zakladny objekt, priradim mu zakladne vlastnosti a schopnosti ktore budu platit pre vsetky auta, potom vytvorim napr. nakladne auto no nebudem tvorit novy objekt, len ma nieco navyse, lebo si zoberiem zakladny objekt auto. 
 Polymorfizmus: schopnost programu reagovat rovnakym sposobom na rozne podnety (vstupy). Napr. mam objekt psa a ten ma cuch, nejakym sposobom mu funguje, ale ked zacucha svojho pana, jedlo alebo suseda, tak reaguje inac. Teda dostava nejake podnety pre svoj cuch a na kazdy iny podnet dokaze inac reagovat. 
 ?
+
+
+Menny priestor je v podstate deklarativna oblast, teda oblast kde sa daju deklarovat premenne alebo funkcie, vznika to kvoli tomu, ze ak by 2 ludia chgceli pracovat na projekte, tak by sa mohlo stat, ze by si obaja zvolili funkciu s rovnakym nazvom a keby to stojime, tak by to nefungovalo, lebo kompilator by nevedel rozhodnut ktoru ma pouzit
+Vsetko co robime v C++ sa vzdy deje v nejakom mennom priestore a vsetko sa automaticky vytvara v globalnom priestore, pokial nevytvorim menny priestor
+
+CIN 
+COUT
+ak ich chcem pouzit tak napisem --) std::cin alebo std::cout
