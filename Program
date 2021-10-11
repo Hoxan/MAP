@@ -1,0 +1,123 @@
+#ifndef PRVY_KRUH_H
+#define PRVY_KRUH_H
+#include <iostream>
+
+class Kruh
+{
+private:
+  int polomer;
+public:
+  Kruh();
+  Kruh(int r);
+  
+  int getPolomer() const {return polomer;};
+  void setPolomer(int r) { polomer = r;};
+  float getObvod() const;
+  float getObsah() const;
+  
+  Kruh operator+(const Kruh &other) const;
+  bool operator<(const Kruh &other) const;
+  Kruh operator+(const int cislo) const;
+  Kruh operator*(const int cislo) const;
+  Kruh operator-(const int cislo) const;
+  Kruh operator-(const Kruh &other) const;
+  
+  Kruh spocitajKruhy(Kruh other) const;
+  Kruh spocitajKruhy(const Kruh *other) const;
+  Kruh spocitajKruhy() const;
+  
+  Kruh odcitajKruhy(Kruh other) const;
+  Kruh odcitajKruhy(Kruh *other) const;
+  Kruh odcitajKruhy() const;
+  
+  bool jeMensi(const Kruh *other) const;
+  
+  static constexpr float PI = 3.14
+  static void vymenKruhy (Kruh *prvy, Kruh *druhy);
+  static void vymenKruhy (kruh &prvy, Kruh &druhy);
+  
+ };
+ const float PI = 3.14;
+ 
+ #endif 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ void Kruh::vymenKruhy(Kruh *prvy, Kruh*druhy)
+ {
+ Kruh Temp;
+ Temp = *prvy;
+ *prvy = *druhy;
+ *druhy = Temp;
+ }
+ 
+  void Kruh::vymenKruhy(Kruh &prvy, Kruh&druhy)
+ {
+ Kruh Temp();
+ Temp = prvy;
+ prvy = druhy;
+ druhy = Temp;
+ }
+ 
+ Kruh Kruh::operator+(const Kruh &other) const
+ {
+    return {r polomer+other.polomer};
+ }
+ 
+ bool Kruh::operator<(const Kruh &other) const
+ {
+    return {polomer<other.polomer};
+ }
+ 
+  Kruh Kruh::operator+(const int cislo) const
+ {
+    return {r polomer*cislo};
+ }
+ 
+  Kruh Kruh::operator-(const int cislo) const
+  {
+  if (polomer > cislo)
+ {
+    return {r polomer*cislo};
+ }
+ return {r};
+ }
+ 
+  Kruh Kruh::operator-(const Kruh &other) const
+  {
+  if(polomer>other.polomer)
+ {
+    return {r polomer-other.polomer};
+ }
+ return {r};
+ {
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Kruh K1();
+ Kruh K2();
+ int cislo = 2;
+ Kruh Spocitane = K1 + K2;
+ std::cout<<Spocitane.getPolomer();
+ std::cout<<(K1<K2);
+ Kruh Znasobene = K1 * cislo;
+ Kruh ScitaneC = K1 + cislo;
+ Kruh Odcitane = K1 - K2;
+ Kruh OdcitaneC = K2 - cislo;
+ std::cout<<Znasobene.getPolomer();
+ std::cout<<ScitaneC.getPolomer();
+ std::cout<<Odcitane.getPolomer();
+ std::cout<<OdcitaneC.getPolomer();
+ 
+ return 0;
+ }
+  
