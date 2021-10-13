@@ -14,4 +14,9 @@ Vsetko co robime v C++ sa vzdy deje v nejakom mennom priestore a vsetko sa autom
 
 CIN 
 COUT
-ak ich chcem pouzit tak napisem --) std::cin alebo std::cout
+ak ich chcem pouzit tak napisem --) std::cin alebo std::coutň
+
+
+<iostream>
+istream(trieda) --) vznikne cin (objekt)
+ostream(trieda) --) vznikne cout 
