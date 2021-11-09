@@ -1,0 +1,23 @@
+trieda: Bod
+  float X; 
+  float Y; --) oba cleny (aj float X) budu privatne
+  
+  Bod ()    konstruktory, jeden bude bezparametricky - prvy bude, ze si vypyta X aj Y
+  Bod (float a)   potom bude konstruktor s jednym parametrom - a inicializuje X aj Y suradnicu
+  Bod (float a, float b)   ak zadam dva parametre, tak inicializuju X a Y
+  
+  bude to vracat float getDistance(Bod&other) const ; --) tato metoda bude musiet vypocitat vzdialenost od pociatku aj vzdialenost dvoch bodov (nech pocita vzdialenost od pociatku (teda 0,0 ja od druheho bodu) ; pouzi implicitny parameter
+  
+  Bod getCenter(const Bod &other) const; --) najde stred medzi 2 bodmi
+  
+  treba pretazit operator cout: vypis bodu: X,Y
+  súčet bodu
+  rozdiel bodu
+  bod * cislo (cislo * bod)
+  bod / cislo
+  
+  
+  
+  
+  
+  
